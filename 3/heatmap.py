@@ -6,7 +6,8 @@ def heatmap(df, name):
     plt.figure(figsize=(20, 12))
     sns.heatmap(df, vmin=-1, vmax=1, xticklabels=1, cmap="YlGnBu")
     plt.title(name, fontsize=24)
-    plt.show()
+    # plt.show()
+    plt.savefig('{}.png'.format(name))
 
 if __name__ == '__main__':
     df = pd.read_csv('mean.csv', index_col=0)
